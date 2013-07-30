@@ -16,7 +16,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[NLViewController alloc] initWithNibName:@"NLViewController" bundle:nil];
+    self.viewController = [[NLViewController alloc] init]; //WithNibName:@"NLViewController" bundle:nil];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
@@ -49,4 +49,37 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+#if 0
+- (void)downloadBundle
+{
+    NSURL *url = [NSURL URLWithString:@"http://127.0.0.1/~wsc/template.bundle.zip"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLResponse *response = nil;
+    NSError *error = nil;
+    NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *)response;
+    NSLog(@"%d", [httpResponse statusCode]);
+    
+    if ([httpResponse statusCode] == 404) // bundle will be deleted and the default interface will be used ...
+    {
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"template.bundle"];
+        [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
+        return;
+    }
+    else if (error)
+    {
+        NSLog(@"%@", error);
+    }
+    
+    BOOL didWriteData = [data writeToFile:zipFile atomically:YES];
+    if (didWriteData)
+    {
+        BOOL success = [SSZipArchive unzipFileAtPath:zipFile toDestination:documentsDirectory];
+        if (!success)
+        {
+            NSLog(@"failed to unzip file.");
+        }
+    }
+}
+#endif
 @end

@@ -16,8 +16,7 @@
 		F6E8D836178D340F0090E4A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D835178D340F0090E4A4 /* Default.png */; };
 		F6E8D838178D340F0090E4A4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D837178D340F0090E4A4 /* Default@2x.png */; };
 		F6E8D83A178D340F0090E4A4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D839178D340F0090E4A4 /* Default-568h@2x.png */; };
-		F6E8D83D178D340F0090E4A4 /* NLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D83C178D340F0090E4A4 /* NLViewController.m */; };
-		F6E8D840178D340F0090E4A4 /* NLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6E8D83E178D340F0090E4A4 /* NLViewController.xib */; };
+		F6E8D849178D344E0090E4A4 /* NLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6E8D848178D344E0090E4A4 /* NLViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,8 +34,7 @@
 		F6E8D837178D340F0090E4A4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		F6E8D839178D340F0090E4A4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F6E8D83B178D340F0090E4A4 /* NLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NLViewController.h; sourceTree = "<group>"; };
-		F6E8D83C178D340F0090E4A4 /* NLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NLViewController.m; sourceTree = "<group>"; };
-		F6E8D83F178D340F0090E4A4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/NLViewController.xib; sourceTree = "<group>"; };
+		F6E8D848178D344E0090E4A4 /* NLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NLViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +84,7 @@
 				F6E8D832178D340F0090E4A4 /* NLAppDelegate.h */,
 				F6E8D833178D340F0090E4A4 /* NLAppDelegate.m */,
 				F6E8D83B178D340F0090E4A4 /* NLViewController.h */,
-				F6E8D83C178D340F0090E4A4 /* NLViewController.m */,
-				F6E8D83E178D340F0090E4A4 /* NLViewController.xib */,
+				F6E8D848178D344E0090E4A4 /* NLViewController.m */,
 				F6E8D82A178D340F0090E4A4 /* Supporting Files */,
 			);
 			path = NibLoading;
@@ -163,7 +160,6 @@
 				F6E8D836178D340F0090E4A4 /* Default.png in Resources */,
 				F6E8D838178D340F0090E4A4 /* Default@2x.png in Resources */,
 				F6E8D83A178D340F0090E4A4 /* Default-568h@2x.png in Resources */,
-				F6E8D840178D340F0090E4A4 /* NLViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +172,7 @@
 			files = (
 				F6E8D830178D340F0090E4A4 /* main.m in Sources */,
 				F6E8D834178D340F0090E4A4 /* NLAppDelegate.m in Sources */,
-				F6E8D83D178D340F0090E4A4 /* NLViewController.m in Sources */,
+				F6E8D849178D344E0090E4A4 /* NLViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +185,6 @@
 				F6E8D82D178D340F0090E4A4 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		F6E8D83E178D340F0090E4A4 /* NLViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F6E8D83F178D340F0090E4A4 /* en */,
-			);
-			name = NLViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -301,6 +289,7 @@
 				F6E8D845178D340F0090E4A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface NLViewController : UIViewController
+@property (nonatomic, weak) IBOutlet UIButton *button;
+@property (nonatomic, weak) IBOutlet UILabel *label;
+
+- (IBAction)buttonTouched:(id)sender;
 
 @end
